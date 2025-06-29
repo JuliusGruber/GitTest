@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [],
+  imports: [NgIf],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

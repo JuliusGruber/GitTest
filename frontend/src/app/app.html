@@ -1,0 +1,7 @@
+<h1>Photo Upload</h1>
+<input type="file" (change)="onFileSelected($event)">
+
+<div *ngIf="photoUrl">
+  <img [src]="photoUrl" alt="Uploaded photo" width="200">
+  <p *ngIf="photoDate">Taken on: {{ photoDate }}</p>
+</div>

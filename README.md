@@ -1,9 +1,11 @@
-# Quarkus Project
+# Vibe coded picture date reader
 
 This repository contains a Quarkus backend and a minimal Angular frontend.
 The Angular app lets users upload a photo, which the backend analyses to extract
 the original capture date from the image's metadata. The date is returned to the
 frontend and shown next to the uploaded photo.
+
+Vibe coded with OpenAI's codex agent. 
 
 ## Build
 

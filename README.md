@@ -20,3 +20,12 @@ To run the application in dev mode:
 ```bash
 mvn quarkus:dev
 ```
+
+The Angular dev server can be started from the `frontend` folder:
+
+```bash
+npx ng serve
+```
+
+The backend has CORS enabled for `http://localhost:4200` so the frontend can
+call the `/upload` endpoint during development.

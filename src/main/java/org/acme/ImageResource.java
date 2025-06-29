@@ -11,7 +11,7 @@ import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
-import org.jboss.resteasy.reactive.MultipartForm;
+
 
 import com.drew.imaging.ImageMetadataReader;
 import com.drew.metadata.Metadata;
@@ -23,7 +23,7 @@ public class ImageResource {
     @POST
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public Map<String, String> upload(@MultipartForm ImageUploadForm form) throws Exception {
+    public Map<String, String> upload( ImageUploadForm form) throws Exception {
         Metadata metadata = ImageMetadataReader.readMetadata(new ByteArrayInputStream(form.file));
         ExifSubIFDDirectory directory = metadata.getFirstDirectoryOfType(ExifSubIFDDirectory.class);
         Date date = directory != null ? directory.getDateOriginal() : null;

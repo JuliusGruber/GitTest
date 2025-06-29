@@ -1,3 +1,4 @@
 /target/
 *.iml
 *.class
+frontend/node_modules/
